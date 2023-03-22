@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4458003506304459025}
   - component: {fileID: 6688419046281395234}
   - component: {fileID: 6883873424972217633}
+  - component: {fileID: 6833667789539701201}
   m_Layer: 5
   m_Name: UpgradeButton
   m_TagString: Untagged
@@ -199,6 +200,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6833667789539701201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252625617428864653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9cce6d95c3a024ea0c60ed9738be1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stars:
+  - {fileID: 8513875832394438023}
+  - {fileID: 8545384476717370761}
+  - {fileID: 7862082983582248665}
+  _fillColor: {r: 1, g: 0.78823537, b: 0.19215688, a: 1}
 --- !u!1 &1327321883522025595
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.78823537, b: 0.19215688, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

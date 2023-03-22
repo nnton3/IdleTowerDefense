@@ -15,18 +15,18 @@ public class ObjectsPull : MonoBehaviour
         {
             var instance = SpawnInstance();
             instance.SetActive(false);
-            _objsStack.Push(instance);
         }
     }
 
     public GameObject GetInstance()
     {
-        GameObject instance = null;
+        GameObject instance;
         if (_objsStack.Count == 0)
             instance = SpawnInstance();
         else
             instance = _objsStack.Pop();
 
+        Debug.Log($"Get instance {instance.name}");
         return instance;
     }
 
@@ -37,6 +37,7 @@ public class ObjectsPull : MonoBehaviour
         instance.name += _instanceCounter;
         _instanceCounter++;
         instance.GetComponent<PullInstance>().Init(() => _objsStack.Push(instance));
+        Debug.Log($"Spawn instance {instance.name}");
         return instance;
     }
 }

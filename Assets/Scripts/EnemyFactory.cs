@@ -6,7 +6,7 @@ public class EnemyFactory : MonoBehaviour
     [SerializeField] private float _timeout;
     [SerializeField] private Transform _basePos;
     private ObjectsPull _enemiesPull;
-    private readonly float spawnRange = 2f;
+    private readonly float spawnRange = 2.5f;
     private float _rangeK;
     private Vector2 _basePosition;
 

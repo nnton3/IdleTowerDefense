@@ -18,9 +18,15 @@ public class BaseTargetSelector : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
-        {
-            Debug.Log($"Add target {collision.transform.parent.name} to queue");
             _targetQueue.Enqueue(collision.transform);
-        }
+    }
+
+    public void SetRange(float range)
+    {
+        iTween.Stop(gameObject, "ScaleTo");
+        iTween.ScaleTo(gameObject, iTween.Hash(
+            "scale", Vector3.one * range,
+            "time", 0.5f,
+            "easetype", iTween.EaseType.easeInOutSine));
     }
 }
