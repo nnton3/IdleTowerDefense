@@ -23,7 +23,6 @@ public class BaseWeapon : MonoBehaviour
         Transform target = null;
         int hitCount = 0;
         while (true)
-        {
             if (target == null)
             {
                 target = GetNextTarget(ref hitCount);
@@ -42,7 +41,6 @@ public class BaseWeapon : MonoBehaviour
                 
                 yield return new WaitForSeconds(_timeout);
             }
-        }
     }
 
     private Transform GetNextTarget(ref int hitCount)
